@@ -1,0 +1,73 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #b51d4c;
+
+}
+
+h2 {
+    font-size: 37px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin: 5px 0;
+    padding: 5px 0;
+    border: 1px solid #b51d4c;
+    box-shadow: 1px 1px 10px black;
+}
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin: 5px 0;
+    padding: 5px 0;
+    border: 1px solid #b51d4c;
+    box-shadow: 1px 1px 10px black;
+}
+.game-container {
+    width: 640px;
+    height: 640px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 10px;
+    perspective: 1000px;
+    margin: 40px auto;
+}
+
+.card {
+    position: relative;
+    background-color: #1485c7;
+    border: 1px solid white;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    transition: all 0.2s;
+    box-shadow: 1px 1px 10px black;
+}
+
+.card.Flip {
+    transform: rotateY(180deg);
+}
+
+.card:active {
+    transform: scale(.95);
+    transition: all 0.2s;
+}
+
+.Front {
+    transform: rotateY(180deg);
+}
+.Front,
+.Back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+}
