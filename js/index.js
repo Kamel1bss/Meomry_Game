@@ -1,4 +1,4 @@
-// Accessing all the Cards
+// Accessing all the Cardsss
 const allCards = document.querySelectorAll(".card");
 
 // Declaring Two Variables Two Compare The Matching 
